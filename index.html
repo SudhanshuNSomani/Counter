@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            grey: "#223240",
+            green: "#04D939",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <body class="w-screen h-screen flex justify-center items-center bg-grey">
+    <div class="container flex flex-col items-center">
+      <div class="count text-[10rem] text-green">0</div>
+      <div class="buttons">
+        <button
+          class="bt border-solid border-[1px] border-green text-green px-[45px] py-[10px] rounded-full"
+          onclick="decrement()"
+        >
+          Prev
+        </button>
+        <button
+          class="bt border-solid border-[1px] border-green text-green px-[45px] py-[10px] rounded-full mx-[15px]"
+          onclick="reset()"
+        >
+          Reset
+        </button>
+        <button
+          class="bt border-solid border-[1px] border-green text-green px-[45px] py-[10px] rounded-full"
+          onclick="increment()"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
